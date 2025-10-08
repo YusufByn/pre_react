@@ -1,8 +1,8 @@
-function Title() {
+function Title(props) {
 
     return (
     <>
-        <h2>Je fais le titre ici</h2>
+        <h2>{props.title}</h2>
     </>
     )
 }
