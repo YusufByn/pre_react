@@ -6,8 +6,6 @@ function Cat() {
 // permet de stocker les fait
 // en gros fact est vide et set,Fact permet de la remplir
     const [fact, setFact] = useState("");
-    const [count, setCount] = useState(0);
-    const [toto, setToto] = useState("toto");
     
     // je déclare une function asyncrone getCatFact
     async function getCatFact() {
@@ -18,12 +16,7 @@ function Cat() {
         // on utilise le setFact avec le data.fact
         setFact(data.fact); 
     }
-
-    function handleClick() {
-        setCount(count + 1);
-    }
-
-
+    
     return(
     <>
         <div>
@@ -34,11 +27,6 @@ function Cat() {
             {/* quand on clique on appel la function getCatFact et du coup ca donne un 
             fait*/}
             <button onClick={getCatFact}>Obtenir un fait sur les chats</button>
-        </div>
-        <div>
-            <button onClick={handleClick}>
-                on est à {count} clique/cliques
-            </button>
         </div>
     </>
   )
