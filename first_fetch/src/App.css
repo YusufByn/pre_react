@@ -57,6 +57,17 @@ section:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.Displayed {
+  background-color: #e8f3ff; /* bleu ciel très doux */
+  border: 1px solid #c9e1ff; /* contour léger bleu pâle */
+  border-radius: 12px; /* coins arrondis */
+  padding: 24px;
+  margin: 20px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-
+.NotDisplayed {
+  display: none;
+}
 
