@@ -11,7 +11,9 @@ function HideElement() {
   return(
     <>
       <section>
-        <h3 className={isVisible}>On nous voit</h3>
+        <div className={isVisible}>
+          <h3>On nous voit</h3>
+        </div>
         <button onClick={toggleVision}>trigger</button>
       </section>
     </>
