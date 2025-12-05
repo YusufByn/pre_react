@@ -116,3 +116,97 @@ section:hover {
   margin-bottom: 6px;
   background-color: rgba(224, 19, 19, 0.806);
 }
+
+/* ===== STYLES POUR LES TODOS ===== */
+
+/* Container principal */
+article {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Titre principal */
+article h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+/* Liste */
+article ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+/* Chaque todo item */
+article li {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: #333;
+}
+
+article li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    background-color: #fff;
+}
+
+/* Les spans à l'intérieur */
+article li span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Premier span (numéro) */
+article li span:first-child {
+    font-weight: 600;
+    color: #666;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Deuxième span (titre) */
+article li span:nth-child(2) {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+/* Troisième span (statut) */
+article li span:last-child {
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-top: 8px;
+    background-color: #e0e0e0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    article ul {
+        grid-template-columns: 1fr;
+    }
+    
+    article h1 {
+        font-size: 2rem;
+    }
+}
