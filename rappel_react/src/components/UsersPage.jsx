@@ -11,7 +11,7 @@ function UsersPage(){
                 // variable pages qui contient mon nombre de pages dans l'api, ici 2
                 const pages = [1,2];
                 // variable allUsers en let très important car elle va changer
-                let allUsers= [];
+                let allUsers = [];
                 // boucle for of de page dans notre variables pages
                 for (const page of pages) {
                     // on appelle la fonction qui fetch
@@ -34,13 +34,16 @@ function UsersPage(){
 
     return(
         <>
-            <section>
+            <h1 className="font-bold underline">Liste des utilisateurs</h1>
+            <section className='flex flex-wrap gap-6 mt-6'>
                 {users.map(user => 
-                    <div key={user.id}>
-                        <p>numéro user n°{user.id}</p>
-                        <h4>prénom nom: {user.first_name} {user.last_name}</h4>
-                        <p>email: {user.email}</p>
-                        <Link to={`/users/${user.id}`}>Voir le profil</Link>
+                    <div key={user.id} className="bg-gray-100 rounded-xl w-61 ml-10 p-4 shadow">
+                        <p className="text-gray-600 font-semibold">numéro user n°{user.id}</p>
+                        <h4 className=''>prénom nom: {user.first_name} {user.last_name}</h4>
+                        <p>{user.email}</p>
+                        <Link to={`/users/${user.id}`}>
+                            <button className="bg-gray-300 text-black mt-4">Détail</button>
+                        </Link>
                     </div>   
                 )}
             </section>
