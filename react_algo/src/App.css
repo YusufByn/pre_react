@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0%;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+
+.cardTest{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 28px;
+  margin: 4px;
+  background-color: rgb(247, 246, 246);
+  border-radius: 10px;
+  border: solid rgb(55, 55, 247);
+}
+
+.imgCss {
+  border-radius: 20px;
+  width: 100%;
+  border: solid rgb(55, 55, 247);
+}
+
+
+
+.read-the-docs {
+  color: #888;
+}
